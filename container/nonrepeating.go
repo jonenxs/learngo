@@ -9,7 +9,7 @@ func lengthOfNonRepeatingSubStr(s string) int {
 	for i, ch := range []byte(s) {
 
 		if lastI, ok := lastOccurred[ch]; ok && lastI >= start {
-			start = lastOccurred[ch] + 1
+			start = lastI + 1
 		}
 		if i-start+1 > maxLength {
 			maxLength = i - start + 1
@@ -21,6 +21,6 @@ func lengthOfNonRepeatingSubStr(s string) int {
 
 func main() {
 	fmt.Println(
-		lengthOfNonRepeatingSubStr("abcabcabcabc"),
+		lengthOfNonRepeatingSubStr("abcabcabcabcd"),
 	)
 }
