@@ -7,9 +7,9 @@ import (
 
 func grade(score int) string {
 	g := ""
-	switch{
+	switch {
 	case score < 0 || score > 100:
-		panic(fmt.Sprintf("Wrong scope: %d",score))
+		panic(fmt.Sprintf("Wrong scope: %d", score))
 	case score < 60:
 		g = "F"
 	case score < 80:
@@ -27,7 +27,7 @@ func main() {
 	if contents, err := ioutil.ReadFile(filename); err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Printf("%s\n",contents)
+		fmt.Printf("%s\n", contents)
 	}
 
 	grade(100)

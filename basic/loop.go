@@ -9,9 +9,9 @@ import (
 
 func main() {
 	fmt.Println(
-			convertToBin(5),
-			convertToBin(13),
-		)
+		convertToBin(5),
+		convertToBin(13),
+	)
 	printFile("abc.txt")
 	forever()
 }
@@ -24,18 +24,18 @@ func convertToBin(n int) string {
 	return result
 }
 
-func printFile(filename string)  {
-	file,err := os.Open(filename)
+func printFile(filename string) {
+	file, err := os.Open(filename)
 	if err != nil {
 		panic(err)
 	}
 	scanner := bufio.NewScanner(file)
-	for scanner.Scan()  {
+	for scanner.Scan() {
 		fmt.Println(scanner.Text())
 	}
 }
 
-func forever(){
+func forever() {
 	for {
 		fmt.Println("abc")
 	}
