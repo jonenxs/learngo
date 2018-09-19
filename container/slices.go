@@ -40,6 +40,6 @@ func main() {
 	slice5 := append(slice4, 12)
 
 	fmt.Println("slice3, slice4, slice5 = ", slice3, slice4, slice5)
-	// slice4 and slice5 no longger
+	// slice4 and slice5 no longer
 	fmt.Println("arr =", arr)
 }
