@@ -38,7 +38,6 @@ func main() {
 	fmt.Println(nodes)
 
 	root.Right.Left.SetValue(4)
-	root.Right.Left.Print()
 	root.Traverse()
 
 	fmt.Println()
