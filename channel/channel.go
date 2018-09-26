@@ -11,6 +11,7 @@ func worker(id int, c chan int) {
 	}
 }
 
+//chan<- 表明产生的chan只能作为接收者
 func createWorker(id int) chan<- int {
 	c := make(chan int)
 	go worker(id, c)
@@ -55,9 +56,9 @@ func channelClose() {
 
 func main() {
 	//channel作为一等公民可以作为参数和返回值
-	//chanDemo()
+	chanDemo()
 	//channel可以进行缓冲
 	//bufferedChannel();
 	//channel可以close 发送方进行关闭
-	channelClose()
+	//channelClose()
 }
